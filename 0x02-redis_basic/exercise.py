@@ -1,5 +1,6 @@
 #!/bin/env python3
 """Cache class"""
+from typing import Union
 import uuid
 import redis
 
@@ -14,7 +15,7 @@ class Cache():
         self._redis = redis.Redis()
         self._redis.flushdb()
 
-    def store(self, data) -> str:
+    def store(self, data: Union[str, bytes, int, float]) -> str:
         """
         Store the input data in Redis with a randomly generated key
 
