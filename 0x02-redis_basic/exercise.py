@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/env python3
 """Cache class that creates an instance of a Redis client"""
 from typing import Union
 import uuid
